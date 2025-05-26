@@ -6,52 +6,212 @@
 
 Delete this line before submission : The core principle of storyboarding is to make the lab/experiment documentation elaborated in a manner that it makes easy for any person (developer/domain and non domain faculty/student) to understand and develop the lab/experiment.
 
-Experiment 1: Name of the Experiment
+Experiment 1: Study of Multi-stage Amplifiers (Frequency Response)
 
 ### 1. Story Outline
 
-Describe outline here ( Guide : The proposer should first draft the story outline for the proposed outline. This could be 2 or 3 paragraphs.)
+This experiment aims to help learners understand the behavior of multi-stage amplifier circuits in terms of frequency response. The primary objective is to simulate and analyze the voltage gain at different frequencies to study the bandwidth and overall frequency response of the circuit.
 
+The learner begins by selecting a predefined multi-stage amplifier configuration or building one using basic circuit elements. They then apply a sinusoidal signal with varying frequencies and record the gain. The simulator displays a frequency response curve based on the readings, helping the learner understand key performance parameters like mid-band gain, bandwidth, and cut-off frequencies.
 ### 2. Story
 
-Describe the Story introduction here (Guide : The next step is to write a story. Story should be a brief logical description in simple English. It should talk about the overall execution of the experiment in a simplified manner. (should not include any equations/ drawings). The story should include the following points) )
+In this simulation, a student explores the functioning of a multi-stage amplifier through interactive learning. They are introduced to a virtual electronic lab environment where they can visualize, modify, and simulate a two or three-stage amplifier. The process begins with the student selecting the type of amplifier and setting component values.
+
+Once configured, the student applies an AC input signal and varies the frequency while noting the output voltage at each stage. These observations are used to calculate and plot gain versus frequency. This visual representation enables the student to identify the -3dB points and bandwidth.
+
+By adjusting components (resistors, capacitors), the student can see how design changes impact the frequency response. The simulation supports real-time changes, making it highly interactive and educational.
 
 #### 2.1 Set the Visual Stage Description:
-Describe here : (Guide : When a user lands up into a simulator, the visual stage is the first thing that user comes across. The visual stage should include all the elements to be seen by a user on an imaginary canvas.  (This should NOT include any drawings. ) )
+When the simulator loads, students see a digital workspace with:
+
+1.A circuit editor pane (drag-and-drop components like resistors, capacitors, transistors).
+
+2.A signal generator tool to apply sinusoidal signals of varying frequency.
+
+3.Measurement tools (voltmeter, frequency counter).
+
+4.A graph pane to plot gain vs frequency in real-time.
+
+5.Component properties panel for modifying values.
+
+6.Preloaded templates of common amplifier stages.
+
+
 
 #### 2.2 Set User Objectives & Goals:
-Describe the objectives and goals in details here : (Guide : The user should clearly understand the aims and objective of the experiment. ( how he will begin experiment. in descriptive))
+1.Understand how frequency affects the gain of amplifier circuits.
+
+2.Learn how to build and simulate multi-stage amplifier circuits.
+
+3.Identify and interpret key points on a frequency response curve (cut-off frequencies, bandwidth, etc.).
+
+4.Investigate how cascading amplifiers impacts overall gain and performance.
+
+Users begin by selecting or building a multi-stage amplifier. They apply an AC signal, record output voltages for varying frequencies, and observe the plotted graph. Their goal is to analyze the amplifier’s performance based on the shape of the frequency response.
 
 #### 2.3 Set the Pathway Activities:
 
-Describe the pathway activites here : (Guide : Set the pathway activities in line with the learning objectives (LOs)  & with a view to achieve the goals set in introductory & pedagogy documnets.  (once he begins, how he will traverse through the entire experiment ? in descriptive))
+1.Component Setup: Choose from prebuilt multi-stage amplifier configurations or build from scratch.
+
+2.Signal Input: Use a signal generator to apply a sinusoidal input, varying the frequency across a defined range.
+
+3.Data Collection: Record output voltage at each frequency.
+
+4.Graph Generation: Auto-plot gain (in dB) versus frequency on a logarithmic scale.
+
+5.Analysis: Identify mid-band gain, bandwidth, and -3dB cut-off frequencies.
+
+6.Modification: Alter circuit components and re-simulate to see the impact on the response.
+
+7.Assessment: Answer MCQs and circuit-based questions to test understanding.
+
+
 
 ##### 2.4 Set Challenges and Questions/Complexity/Variations in Questions:
 
-Describe the challenges Here : (Guide : Set Challenges and Questions/Complexity/variations in questions according to User’s level, so as to invoke the learners’ interest.  (while traversing, what challenges he will face? how he has to solve and overcome ? descriptive).)
+1.Interpreting the graph when gain drops unexpectedly.
+2.Troubleshooting incorrect configurations (e.g., incorrect biasing).
+3.Predicting output before simulation based on component values.
+
+Questions like:
+
+I.What happens to bandwidth if coupling capacitors are increased?
+II.How does a common-emitter stage affect frequency response compared to a common-collector?
+
 
 ##### 2.5 Allow pitfalls:
-Describe the pitfalls here: (Guide : while traversing or while solving challenge, how will we bring a situation in front of him that he commits mistake if he is not attentive , or not following procedure , descriptive)
+1.If users connect stages improperly, the simulator can show zero or distorted output.
+2.Incorrect capacitor values can lead to a loss of gain at lower or higher frequencies.
+3.Misconfigured biasing can simulate transistor cutoff or saturation.
 
+These help students learn the importance of each component and correct design practices.
 ##### 2.6 Conclusion:
-Describe conclusion here : (Guide: This may include displaying: how much time did the user take to solve the questions/ How many questions were right?/ How many hints did the learner use. Based on this the evaluation/marking to be suggested to the user. (once he is towards the completion of the experiment, what LO he is taking along with him, what will be his probable, interpretation/conclusion , descriptive) )
+At the end of the simulation, users are shown:
+
+1.Time spent on the simulation.
+
+2.Number of correct vs incorrect configurations.
+
+3.Number of hints used (if any).
+
+4.Final frequency response graph and its parameters.
+
+The learner leaves with a deeper understanding of frequency-dependent behavior in amplifiers and how to analyze real-world multi-stage amplifier circuits.
+
+
 
 ##### 2.7 Equations/formulas: NA
-Type equations here : (Guide : ( a separate sheet having equations / programs for the lab exper3ment to be shared along with the Story submissions (1) . You can mark it as numerical reference numbers within the story narration (like we cite in the research papers) and then separately share these equations/programs sheets as a reference, do not include the equations as a whole in the narration))
-Tool can be used to integrate formula in Markdown <b> [here](http://latex.codecogs.com/eqneditor/samples/example3.php) </b>
-
+(Handled separately in numerical reference document with equations like gain = Vout/Vin, bandwidth = f2 - f1, etc.)
 
 ### 3. Flowchart
-Link to flow chart Here : Store in the  /flowchart folder within pedagogy folder in your repo
-<br>
-(Guide :The lab proposer should extract logic from the story, prepare a flowchart from the story narration and write the algorithm to execute the black box.  use Google Drawings https://docs.google.com/drawings/ (send the link to your flowchart and also attach .png by exporting it )
+Link to Flowchart: [Add link here after creating in Google Drawings and uploading to /flowchart folder]
+(Use: https://docs.google.com/drawings/)
+
 
 ### 4. Mindmap
- Link to mindmap here : Store the mindmap in both .mm & .png extension in the  /mindmap folder and include link of only .pdf verison here
+Link to Mindmap (.pdf version): [Add link here after exporting from FreeMind and uploading to /mindmap folder]
+(Use: http://freemind.sourceforge.net/wiki/index.php/Main_Page)
+
+
  <br>
- (Guide : An elaborate mind map (connecting all the points in the experiment flow ) should be prepared and submitted by the lab proposer. The mind map should be a clear and detailed document that takes into account all minute intri5acies involved in the development of virtual lab. The mindmap should be self-content and any developer across the globe should be able to code it with all those details. using only FreeMind http://freemind.sourceforge.net/wiki/index.php/Main_Page (send the .png file and also the original .mm extension project file. )
+Step-by-Step Instructions:
 
+1.Download and Install FreeMind.
+
+2.Create the main node:
+
+* Title: Study of Multi-stage Amplifiers (Frequency Response)
+
+3.Add branches for key components:
+
+* Theory
+i.Amplifier basics
+
+ii.Frequency response
+
+iii.Gain-bandwidth product
+
+* Learning Objectives
+
+i.Analyze gain vs. frequency
+
+ii.Understand multi-stage effects
+
+iii.Use CRO for measurements
+
+* Simulator Components
+
+i.Function generator
+
+ii.CRO
+
+iii.Amplifier circuit (transistors, capacitors, resistors)
+
+* User Actions
+
+i.Build circuit
+
+ii.Apply input signal
+
+iii.Vary frequency
+
+iv.Observe output
+
+* Feedback/Challenges
+
+i.Incorrect connections
+
+ii.Component mismatch
+
+iii.Misinterpretation of CRO
+
+* Assessment
+
+i.Questions
+
+ii.Gain plots
+
+iii.Time taken
+
+* Outputs
+
+i.CRO waveform
+
+ii.Frequency response graph
+
+iii.Score or feedback
+
+* Pitfalls
+
+i.No output
+
+ii.Wrong bandwidth
+
+iii.Phase distortion
+
+4.Export:
+
+i.Save project as .mm
+
+ii.Export image as .png
+
+iii.Convert/export a .pdf version for submission
 ### 5. Storyboard
+Link to Storyboard (.gif file): [Add link here after creating using Storyboarder and uploading]
+(Use: https://wonderunit.com/storyboarder/)
+INSTRUCTIONS:
+1.Download and install Storyboarder.
 
-Link the storyboard (.gif file ) in here :
-(Guide: This document should include sketching and description scene wise (duration, action, description). Software to be used for storyboarding : https://wonderunit.com/storyboarder/ (Its a FOSS tool).
+2.Use simple wireframe sketches for each scene (no need for complex art).
+
+3.Add a short description and timing to each panel.
+
+4.Save as .storyboarder and export the file as:
+
+i.gif for animated view
+
+ii.pdf or .png for static reference
+
+5.Store the .gif in your /storyboard/ folder on GitHub.
+
+
