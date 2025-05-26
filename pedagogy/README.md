@@ -10,7 +10,7 @@
 
 <b>Discipline |Electronics Engineering <b> 
 :--|:--|
-<b> Lab | Electronics Engineering <b> 
+<b> Lab | 	Analog Electronics Lab <b> 
 <b> Experiment| Study of Multi-stage Amplifiers (Frequency Response)  <b> 
 
 
