@@ -53,7 +53,7 @@ This document lists all the references used in the design, development, and educ
 
 **Project Name:** NextGen V-Creators  
 **Experiment Module:** Study of Multi-stage Amplifiers (Frequency Response)  
-**GitHub Repo:** _[your-repo-link-here]_ (Replace this with actual link)
+**GitHub Repo:** https://github.com/rishabh9560168/NextGen-V-Creators-3.git
 
 ---
 
