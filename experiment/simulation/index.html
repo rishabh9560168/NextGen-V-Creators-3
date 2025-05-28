@@ -1,13 +1,302 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Stage Amplifier Laboratory</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-		<!-- Your code goes here-->
+    <div class="container">
+        <!-- Header -->
+        <div class="header-card">
+            <div class="header-content">
+                <h1 class="main-title">
+                    <span class="lightning">⚡</span>
+                    Multi-Stage Amplifier Laboratory
+                    <span class="lightning">⚡</span>
+                </h1>
+                <p class="subtitle">Interactive Frequency Response Analysis with Bilingual Voice Guidance</p>
+            </div>
+        </div>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+        <!-- Control Panel -->
+        <div class="control-grid">
+            <!-- Main Controls -->
+            <div class="main-controls">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">⚙️ Control Panel</h3>
+                    </div>
+                    <div class="card-content">
+                        <!-- Frequency Control -->
+                        <div class="control-group">
+                            <div class="control-label">
+                                <label>Input Frequency</label>
+                                <span class="frequency-badge" id="frequencyDisplay">20 kHz</span>
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" id="frequencySlider" min="1" max="100" value="20" class="slider">
+                                <div class="slider-labels">
+                                    <span>1 kHz</span>
+                                    <span>50 kHz</span>
+                                    <span>100 kHz</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Current Measurements -->
+                        <div class="measurements">
+                            <h4>Current Measurements</h4>
+                            <div class="measurements-grid">
+                                <div>
+                                    <span class="label">Frequency:</span>
+                                    <p class="value" id="currentFreq">20 kHz</p>
+                                </div>
+                                <div>
+                                    <span class="label">Gain:</span>
+                                    <p class="value gain" id="currentGain">25.00 dB</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="action-buttons">
+                            <button class="btn primary" id="startTourBtn">
+                                ▶️ Start Guided Tour
+                            </button>
+                            <button class="btn secondary" id="resetBtn">
+                                🔄 Reset Lab
+                            </button>
+                            <button class="btn secondary" id="repeatBtn">
+                                🔊 Repeat Instructions
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="sidebar">
+                <div class="language-selector">
+                    <h3>🎙️ Voice Language Selection</h3>
+                    <div class="language-buttons">
+                        <button class="btn lang-btn" data-lang="english">English Only</button>
+                        <button class="btn lang-btn active" data-lang="both">Both Languages</button>
+                        <button class="btn lang-btn" data-lang="hindi">हिंदी Only</button>
+                    </div>
+                    <div class="current-language">
+                        Current: <span id="currentLanguage">Both</span>
+                    </div>
+                </div>
+
+                <!-- Concept Explanations -->
+                <div class="card">
+                    <div class="card-header">
+                        <h4>❓ Concept Explanations</h4>
+                    </div>
+                    <div class="card-content">
+                        <button class="concept-btn" data-concept="bode">
+                            📊 Bode Plot
+                        </button>
+                        <button class="concept-btn" data-concept="stages">
+                            📻 Amplifier Stages
+                        </button>
+                        <button class="concept-btn" data-concept="frequency">
+                            ⚡ Frequency Response
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visualization Tabs -->
+        <div class="tabs-container">
+            <div class="tabs-list">
+                <button class="tab-btn active" data-tab="waveform">Waveform</button>
+                <button class="tab-btn" data-tab="bode">Bode Plot</button>
+                <button class="tab-btn" data-tab="stages">Stage Analysis</button>
+            </div>
+
+            <div class="tab-content">
+                <!-- Waveform Display -->
+                <div class="tab-panel active" id="waveform">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">📈 Oscilloscope Display</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="canvas-container">
+                                <canvas id="waveformCanvas" width="600" height="300"></canvas>
+                                <div class="canvas-overlay">Time Domain Analysis</div>
+                            </div>
+                            <div class="legend">
+                                <div class="legend-item">
+                                    <div class="legend-color blue"></div>
+                                    <span>Input Signal</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color green"></div>
+                                    <span>Amplified Output</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bode Plot -->
+                <div class="tab-panel" id="bode">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">📊 Bode Plot - Magnitude Response</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="canvas-container">
+                                <canvas id="bodeCanvas" width="600" height="400"></canvas>
+                                <div class="canvas-overlay">Frequency Domain Analysis</div>
+                            </div>
+                            <div class="legend">
+                                <div class="legend-item">
+                                    <div class="legend-color cyan"></div>
+                                    <span>Response Curve</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color yellow"></div>
+                                    <span>-3dB Reference</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color red circle"></div>
+                                    <span>Current Frequency</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stage Analysis -->
+                <div class="tab-panel" id="stages">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">⚡ Amplifier Stage Analysis</h3>
+                        </div>
+                        <div class="card-content">
+                            <!-- Circuit Diagram -->
+                            <div class="circuit-diagram">
+                                <div class="stage">
+                                    <div class="stage-box blue">CE</div>
+                                    <div class="stage-label">Common Emitter</div>
+                                    <div class="stage-badge blue">Stage 1</div>
+                                </div>
+                                <div class="arrow">→</div>
+                                <div class="stage">
+                                    <div class="stage-box purple">CB</div>
+                                    <div class="stage-label">Common Base</div>
+                                    <div class="stage-badge purple">Stage 2</div>
+                                </div>
+                                <div class="arrow">→</div>
+                                <div class="stage">
+                                    <div class="stage-box green">OUT</div>
+                                    <div class="stage-label">Output</div>
+                                    <div class="stage-badge green">Load</div>
+                                </div>
+                            </div>
+
+                            <!-- Gain Analysis -->
+                            <div class="gain-analysis">
+                                <div class="gain-card blue">
+                                    <h4>Stage 1 (CE)</h4>
+                                    <div class="gain-value" id="stage1Gain">15.00 dB</div>
+                                    <div class="gain-details">
+                                        <div>• High input impedance</div>
+                                        <div>• Voltage & current gain</div>
+                                        <div>• 180° phase shift</div>
+                                    </div>
+                                </div>
+                                <div class="gain-card purple">
+                                    <h4>Stage 2 (CB)</h4>
+                                    <div class="gain-value" id="stage2Gain">10.00 dB</div>
+                                    <div class="gain-details">
+                                        <div>• Low input impedance</div>
+                                        <div>• Voltage gain only</div>
+                                        <div>• No phase shift</div>
+                                    </div>
+                                </div>
+                                <div class="gain-card green">
+                                    <h4>Total Gain</h4>
+                                    <div class="gain-value" id="totalGain">25.00 dB</div>
+                                    <div class="gain-details">
+                                        <div>• Combined response</div>
+                                        <div>• @ <span id="currentFreqStage">20</span> kHz</div>
+                                        <div>• Linear gain: <span id="linearGain">177.83</span>×</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Performance Metrics -->
+                            <div class="performance-metrics">
+                                <h4>Performance Analysis</h4>
+                                <div class="metrics-grid">
+                                    <div>
+                                        <div class="metric-label">Bandwidth</div>
+                                        <div class="metric-value">~30 kHz</div>
+                                    </div>
+                                    <div>
+                                        <div class="metric-label">Center Freq</div>
+                                        <div class="metric-value">40 kHz</div>
+                                    </div>
+                                    <div>
+                                        <div class="metric-label">Input Z</div>
+                                        <div class="metric-value">High</div>
+                                    </div>
+                                    <div>
+                                        <div class="metric-label">Output Z</div>
+                                        <div class="metric-value">Medium</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions-card">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Laboratory Instructions</h3>
+                </div>
+                <div class="card-content">
+                    <div class="instructions-grid">
+                        <div>
+                            <h4 class="instruction-title">English Instructions:</h4>
+                            <ol class="instruction-list">
+                                <li>Select your preferred voice language above</li>
+                                <li>Adjust the frequency slider to sweep from 1-100 kHz</li>
+                                <li>Observe real-time waveform changes in the oscilloscope</li>
+                                <li>Monitor gain variations in the Bode plot</li>
+                                <li>Analyze individual stage contributions</li>
+                                <li>Listen to voice guidance for each measurement</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="instruction-title">हिंदी निर्देश:</h4>
+                            <ol class="instruction-list">
+                                <li>ऊपर अपनी पसंदीदा आवाज़ भाषा चुनें</li>
+                                <li>1-100 kHz से फ्रीक्वेंसी स्लाइडर को समायोजित करें</li>
+                                <li>ऑसिलोस्कोप में रियल-टाइम वेवफॉर्म परिवर्तन देखें</li>
+                                <li>बोडे प्लॉट में गेन वेरिएशन की निगरानी करें</li>
+                                <li>व्यक्तिगत स्टेज योगदान का विश्लेषण करें</li>
+                                <li>प्रत्येक माप के लिए आवाज़ मार्गदर्शन सुनें</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="main.js"></script>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 </body>
 </html>
