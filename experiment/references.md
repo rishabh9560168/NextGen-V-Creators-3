@@ -4,7 +4,7 @@ This document lists all the references used in the design, development, and educ
 
 ---
 
-## 📚 Textbooks & Academic References
+##  Textbooks & Academic References
 
 1. **Sedra, A. S., & Smith, K. C.**  
    *Microelectronic Circuits*  
@@ -24,7 +24,7 @@ This document lists all the references used in the design, development, and educ
 
 
 
-## 🎓 Online Educational Resources
+##  Online Educational Resources
 
 1. **NPTEL - Analog Circuits Course**  
    URL: [https://nptel.ac.in/courses/108/108/108108098/](https://nptel.ac.in/courses/108/108/108108098/)  
@@ -41,7 +41,7 @@ This document lists all the references used in the design, development, and educ
 
 ---
 
-## 🧩 Audio/Multilingual Guide Support
+##  Audio/Multilingual Guide Support
 
 - Text-to-speech synthesis: Google Text-to-Speech API (used in prototype)
 - Hindi-English voiceover references generated using IBM Watson TTS (demo version)
@@ -49,7 +49,7 @@ This document lists all the references used in the design, development, and educ
 ---
 
 
-## 📁 Repository Details
+##  Repository Details
 
 **Project Name:** NextGen V-Creators  
 **Experiment Module:** Study of Multi-stage Amplifiers (Frequency Response)  
@@ -57,7 +57,7 @@ This document lists all the references used in the design, development, and educ
 
 ---
 
-## 📌 Citation
+##  Citation
 
 Please cite this project as:
 
