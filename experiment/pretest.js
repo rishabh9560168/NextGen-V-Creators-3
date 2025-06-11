@@ -90,46 +90,178 @@
 
   const myQuestions = [
     {
-      question: "1. जिस सिद्धांत पर विशिष्ट घूर्णन के प्रयोग का आधार है वह है:",  ///// Write the question inside double quotes
-      answers: {
-        a: "ध्रुवीकृत प्रकाश ऑप्टिकली सक्रिय माध्यम से गुजरते समय दो घटकों में विभाजित हो जाता है",                  ///// Write the option 1 inside double quotes
-        b: "ध्रुवीकृत प्रकाश ऑप्टिकली सक्रिय माध्यम से गुजरते समय घुमता है",                  ///// Write the option 2 inside double quotes
-        c: "ध्रुवीकृत प्रकाश पानी से गुजरते समय विचलित हो जाता है",                  ///// Write the option 3 inside double quotes
-        d: "इनमें से कोई नहीं"                   ///// Write the option 4 inside double quotes
+      "question": "What is the primary function of a multi-stage amplifier?",
+      "answers": {
+        "a": "To store energy",
+        "b": "To amplify signals in steps",
+        "c": "To convert AC to DC",
+        "d": "To filter signals"
       },
-      correctAnswer: "b"                ///// Write the correct option inside double quotes
+      "explanations": {
+        "a": "Storage is not its purpose.",
+        "b": "Correct. Each stage increases gain.",
+        "c": "This is the job of a rectifier.",
+        "d": "Filtering is secondary, not primary function."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     },
-
     {
-     question: "2. शुगर घोल की सांद्रता बढ़ाने पर ध्रुवीकृत प्रकाश का घुमाव कोण:",  ///// Write the question inside double quotes
-      answers: {
-        a: "बढ़ता है",                  ///// Write the option 1 inside double quotes
-        b: " घटता है",                  ///// Write the option 2 inside double quotes
-        c: "अपरिवर्तित रहता है",                  ///// Write the option 3 inside double quotes
-        d: "इनमें से कोई नहीं"                   ///// Write the option 4 inside double quotes
+      "question": "Which frequency range is amplified least in a typical amplifier?",
+      "answers": {
+        "a": "Mid frequencies",
+        "b": "Low frequencies",
+        "c": "High frequencies",
+        "d": "All frequencies equally"
       },
-      correctAnswer: "a"                ///// Write the correct option inside double quotes
-    },     
+      "explanations": {
+        "a": "Mid frequencies are usually stable.",
+        "b": "Low frequencies often face coupling capacitor limitations.",
+        "c": "High frequencies may face parasitic capacitance issues.",
+        "d": "Incorrect. Amplifiers do not amplify all equally."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
     {
-      question: "3. किसी भी घोल का विशिष्ट घूर्णन किस पर निर्भर करता है:",  ///// Write the question inside double quotes
-       answers: {
-         a: "सांद्रता",                  ///// Write the option 1 inside double quotes
-         b: "नलिका की लंबाई",                  ///// Write the option 2 inside double quotes
-         c: "तापमान",                  ///// Write the option 3 inside double quotes
-         d: "इनमें से कोई नहीं"                   ///// Write the option 4 inside double quotes
-       },
-       correctAnswer: "c"                ///// Write the correct option inside double quotes
-     }, 
-     {
-      question: "4. यदि नलिका की लंबाई बढ़ाई जाए तो किसी भी घोल का विशिष्ट घूर्णन:",  ///// Write the question inside double quotes
-       answers: {
-         a: "बढ़ता है",                  ///// Write the option 1 inside double quotes
-         b: "घटता है",                  ///// Write the option 2 inside double quotes
-         c: "अपरिवर्तित रहता है",                  ///// Write the option 3 inside double quotes
-         d: "इनमें से कोई नहीं"                   ///// Write the option 4 inside double quotes
-       },
-       correctAnswer: "c"                ///// Write the correct option inside double quotes
-     },                              ///// To add more questions, copy the section below 
+      "question": "In a frequency response plot, what does the –3 dB point indicate?",
+      "answers": {
+        "a": "Maximum power output",
+        "b": "Cutoff frequency",
+        "c": "Signal completely blocked",
+        "d": "Noise threshold"
+      },
+      "explanations": {
+        "a": "Maximum power occurs at center frequencies.",
+        "b": "Correct. –3 dB indicates cutoff.",
+        "c": "It’s not zero signal, just reduced.",
+        "d": "Not related to noise."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the main reason for cascading amplifier stages?",
+      "answers": {
+        "a": "To reduce power consumption",
+        "b": "To increase gain",
+        "c": "To decrease gain",
+        "d": "To reduce noise"
+      },
+      "explanations": {
+        "a": "Power consumption may increase.",
+        "b": "Correct. Each stage multiplies gain.",
+        "c": "Not the purpose of cascading.",
+        "d": "Noise may actually accumulate."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which type of coupling is commonly used between amplifier stages?",
+      "answers": {
+        "a": "Inductive coupling",
+        "b": "Optical coupling",
+        "c": "Capacitive coupling",
+        "d": "Transformer coupling"
+      },
+      "explanations": {
+        "a": "Less common in audio stages.",
+        "b": "Used in isolation, not amplification.",
+        "c": "Correct. Capacitive coupling is standard.",
+        "d": "Used in power stages."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which component is most responsible for frequency roll-off in amplifiers?",
+      "answers": {
+        "a": "Resistor",
+        "b": "Inductor",
+        "c": "Capacitor",
+        "d": "Diode"
+      },
+      "explanations": {
+        "a": "Affects gain but not roll-off much.",
+        "b": "Less used in small signal amplifiers.",
+        "c": "Correct. Capacitors control low and high frequency behavior.",
+        "d": "Not used for roll-off."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is NOT a stage in a multi-stage amplifier?",
+      "answers": {
+        "a": "Voltage amplifier",
+        "b": "Power amplifier",
+        "c": "Filter stage",
+        "d": "Driver stage"
+      },
+      "explanations": {
+        "a": "Voltage stage increases amplitude.",
+        "b": "Power stage drives load.",
+        "c": "Correct. Filters are separate circuits.",
+        "d": "Driver connects voltage and power stages."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What shape does the frequency response of a typical amplifier have?",
+      "answers": {
+        "a": "U-shaped",
+        "b": "Flat in the middle, drops at both ends",
+        "c": "Steep slope throughout",
+        "d": "Wavy throughout"
+      },
+      "explanations": {
+        "a": "Incorrect.",
+        "b": "Correct. It's flat in the midband and drops at high/low freq.",
+        "c": "Only in filters.",
+        "d": "Not typically expected."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Why is mid-band gain of amplifier considered constant?",
+      "answers": {
+        "a": "Capacitors act as open circuits",
+        "b": "Reactance is minimum",
+        "c": "All reactive effects are negligible",
+        "d": "Voltage supply is zero"
+      },
+      "explanations": {
+        "a": "Incorrect; capacitors are active.",
+        "b": "Not true for all frequencies.",
+        "c": "Correct. Mid-band avoids RC or LC influence.",
+        "d": "No amplification occurs without supply."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the unit used to express gain in frequency response?",
+      "answers": {
+        "a": "Ohm",
+        "b": "Hertz",
+        "c": "Volt",
+        "d": "Decibel"
+      },
+      "explanations": {
+        "a": "Used for resistance.",
+        "b": "Used for frequency.",
+        "c": "Used for potential difference.",
+        "d": "Correct. Gain is expressed in dB."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    
+  ]
+};
+                          ///// To add more questions, copy the section below 
     									                  ///// this line
 
 
