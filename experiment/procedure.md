@@ -1,17 +1,17 @@
 ### Procedure
-# 🧪 Procedure – Study of Multi-stage Amplifiers (Frequency Response)
+#  Procedure – Study of Multi-stage Amplifiers (Frequency Response)
 
 This section outlines the step-by-step procedure to perform the experiment and analyze the frequency response of multi-stage amplifiers in a virtual lab environment.
 
 ---
 
-## 🎯 Objective
+##  Objective
 
 To observe and analyze how the voltage gain of multi-stage amplifiers varies with frequency and identify important parameters such as cut-off frequencies and bandwidth.
 
 ---
 
-## 🧰 Prerequisites
+##  Prerequisites
 
 - Basic knowledge of amplifier circuits (CE, CB, CC)
 - Understanding of gain, bandwidth, and Bode plots
@@ -19,7 +19,7 @@ To observe and analyze how the voltage gain of multi-stage amplifiers varies wit
 
 ---
 
-## 🔬 Experimental Steps
+##  Experimental Steps
 
 ### Step 1: **Launch the Simulation**
 
@@ -101,7 +101,7 @@ To observe and analyze how the voltage gain of multi-stage amplifiers varies wit
 
 ---
 
-## 📈 Output
+##  Output
 
 - Bode plot of frequency vs gain
 - Calculated bandwidth
@@ -110,7 +110,7 @@ To observe and analyze how the voltage gain of multi-stage amplifiers varies wit
 
 ---
 
-## ✅ Completion Criteria
+##  Completion Criteria
 
 - Accurate identification of cut-off frequencies and bandwidth
 - Proper interpretation of the Bode plot
