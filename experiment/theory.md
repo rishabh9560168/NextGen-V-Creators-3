@@ -1,14 +1,14 @@
 
 # Study of Multi-stage Amplifiers (Frequency Response)
 
-## 🎯 Objective
+##  Objective
 To study the frequency response of multi-stage amplifiers and understand how cascading amplifier stages affects gain, bandwidth, and signal fidelity.
 
 ---
 
-## 🧠 Theory
+##  Theory
 
-### 🔍 What is a Multi-stage Amplifier?
+###  What is a Multi-stage Amplifier?
 A **multi-stage amplifier** consists of two or more amplifier stages connected in series (cascaded), where the output of one stage is fed as input to the next. This is done to:
 - Achieve higher voltage gain
 - Improve bandwidth or input/output impedance
@@ -22,7 +22,7 @@ Each stage may be:
 
 ---
 
-### 📊 Frequency Response
+###  Frequency Response
 Frequency response is a measure of the amplifier's gain over a range of input frequencies. It typically shows:
 - **Low-frequency fall-off** due to coupling and bypass capacitors
 - **Mid-frequency flat region** (constant gain)
@@ -35,7 +35,7 @@ Frequency response is a measure of the amplifier's gain over a range of input fr
 
 ---
 
-## ⚙️ Simulation Description
+##  Simulation Description
 
 In this simulation:
 - Users can select the number of stages (2 or 3)
@@ -50,7 +50,7 @@ Features:
 
 ---
 
-## 🔎 Observations
+##  Observations
 
 Users should observe:
 - The effect of adding more amplifier stages
@@ -59,7 +59,7 @@ Users should observe:
 
 ---
 
-## 📐 Applications
+##  Applications
 
 - Audio amplifiers
 - Communication systems
@@ -68,7 +68,7 @@ Users should observe:
 
 ---
 
-## 📚 References
+##  References
 
 1. Sedra & Smith – *Microelectronic Circuits*
 2. Boylestad & Nashelsky – *Electronic Devices and Circuit Theory*
