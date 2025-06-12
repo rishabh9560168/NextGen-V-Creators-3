@@ -4,7 +4,7 @@
 
 /////////////////////////////////////////////////////////////////////////////
 
-(function() {
+(function () {
   function buildQuiz() {
     // we'll need a place to store the HTML output
     const output = [];
@@ -72,7 +72,6 @@
   const quizContainer = document.getElementById("quiz");
   const resultsContainer = document.getElementById("results");
   const submitButton = document.getElementById("submit");
- 
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -81,12 +80,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
-
 /////////////// Write the MCQ below in the exactly same described format ///////////////
-
 
   const myQuestions = [
     {
@@ -258,43 +252,8 @@
       },
       "correctAnswer": "d",
       "difficulty": "beginner"
-    
-  ]
-};
-                          ///// To add more questions, copy the section below 
-    									                  ///// this line
-
-
-    /* To add more MCQ's, copy the below section, starting from open curly braces ( { )
-        till closing curly braces comma ( }, )
-
-        and paste it below the curly braces comma ( below correct answer }, ) of above 
-        question
-
-    Copy below section
-
-    {
-      question: "This is question n?",
-      answers: {
-        a: "Option 1",
-        b: "Option 2",
-        c: "Option 3",
-        d: "Option 4"
-      },
-      correctAnswer: "c"
-    },
-
-    Copy above section
-
-    */
-
-
-
-
-  ];
-
-
-
+    }
+  ]; // <-- Properly closed array
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -302,14 +261,12 @@
 
 /////////////////////////////////////////////////////////////////////////////
 
-
   // display quiz right away
   buildQuiz();
 
   // on submit, show results
   submitButton.addEventListener("click", showResults);
 })();
-
 
 /////////////////////////////////////////////////////////////////////////////
 
